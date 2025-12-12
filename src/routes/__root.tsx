@@ -8,7 +8,9 @@ export const Route = createRootRoute({
   component: () => (
     <>
       <Header />
-      <Outlet />
+      <header className="text-[calc(10px+2vmin)]">
+        <Outlet />
+      </header>
       <TanStackDevtools
         config={{
           position: 'bottom-right',
