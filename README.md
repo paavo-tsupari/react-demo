@@ -23,10 +23,10 @@ install aspnet
 run in aspnetcore/
 
 ```bash 
-aspnet build
+dotnet build
 ```
 
 ```bash
-pnpm run
+dotnet run
 ```
 
