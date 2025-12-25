@@ -9,3 +9,11 @@ ReactUI/.nitro
 ReactUI/.tanstack
 
 .env
+
+obj/
+bin/
+
+*.nuget.dgspec.json
+*.nuget.props
+*.nuget.targets
+project.assets.json
