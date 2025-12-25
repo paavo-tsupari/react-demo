@@ -17,3 +17,16 @@ pnpm dev
 # Backend
 
 aspnetcore cs
+
+install aspnet
+
+run in aspnetcore/
+
+```bash 
+aspnet build
+```
+
+```bash
+pnpm run
+```
+
