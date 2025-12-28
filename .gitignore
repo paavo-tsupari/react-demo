@@ -17,3 +17,4 @@ bin/
 *.nuget.props
 *.nuget.targets
 project.assets.json
+aspnetcore/Web/publish

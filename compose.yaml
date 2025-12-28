@@ -1,0 +1,7 @@
+services:
+  backend:
+    build: ./aspnetcore
+    ports:
+    - 8080:8080
+    env_file: 
+      - ./aspnetcore/.env
