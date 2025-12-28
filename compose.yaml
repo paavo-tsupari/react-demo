@@ -7,7 +7,7 @@ services:
     - 8080:8080
     env_file: 
       - ./aspnetcore/.env
-    command: ["dotnet", "MyApp.dll"]
+    command: ["dotnet", "Web.dll"]
   database:
     image: postgres:18
     env_file:
