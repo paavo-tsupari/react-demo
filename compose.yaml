@@ -1,6 +1,8 @@
 services:
   backend:
-    build: ./aspnetcore
+    build:
+      context: ./aspnetcore
+      dockerfile: Dockerfile
     ports:
     - 8080:8080
     env_file: 

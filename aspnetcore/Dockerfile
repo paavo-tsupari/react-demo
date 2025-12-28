@@ -2,7 +2,11 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0 as build
 
 WORKDIR /app 
 
-COPY Common DataAccess Domain Web  ./
+COPY Common  ./Common
+COPY Domain    ./Domain
+COPY Web     ./Web
+COPY DataAccess ./DataAccess
+COPY backend.slnx ./
 
 RUN dotnet publish ./Web/Web.csproj
 
