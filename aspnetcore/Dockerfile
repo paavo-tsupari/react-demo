@@ -16,4 +16,6 @@ WORKDIR /app
 
 COPY --from=build /build . 
 
+USER user
+
 EXPOSE 8080
