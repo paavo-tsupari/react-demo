@@ -1,13 +1,15 @@
 using Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using DotNetEnv;
+
 
 var builder = WebApplication.CreateBuilder(args);
-var connectionString =
-    builder.Configuration.GetConnectionString("DefaultConnection")
-        ?? throw new InvalidOperationException("Connection string"
-        + "'DefaultConnection' not found.");
+Env.Load();
 
+var connectionString = @"Host=" + Environment.GetEnvironmentVariable("POSTGRES_HOST") + ";Username=" + Environment.GetEnvironmentVariable("POSTGRES_USER") + ";Password=" + Environment.GetEnvironmentVariable("POSTGRES_PASSWORD") + ";Database=" + Environment.GetEnvironmentVariable("POSTGRES_DB");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(connectionString));
+    options.UseNpgsql(connectionString));
+
 // https://aka.ms/aspnet/openapi
 builder.Services.AddControllers();
 
